@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Funded Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    </head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Rural Water Supply and Sanitation</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="userhome.html">Home</a></li>
+      <li><a href="reqwatercon.html">Request New Water Connection</a></li>
+      <li><a href="reqihhl.html">Request New IHHL</a></li>
+      <li class="active"><a href="funding.html">Funding Details</a></li>
+      <li><a href="fundinput.html">Release Fund</a></li>
+      <li><a href="index.html" onclick="logout()">Logout</a></li>
+    </ul>
+      
+        
+      
+      
+  </div>
+</nav>
+  
+    <h1 align="center">Funds Details</h1>
+    <div class="container">
+      <form action="fundretrieve">
+      <input type="submit" value="Get Funds">
+
+    </form>
+    </div>
+    <div class="container"> 
+        <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">IHHL Fund ID</th>
+      <th scope="col">Sanctioned IHHL</th>
+      <th scope="col">Estimated Cost</th>
+      <th scope="col">Fund From NGO</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for fund in funddetails %}
+    <tr>
+      <th scope="row">{{ fund.s }}</th>
+      
+      <td>{{ fund.IHHL_fund_id }}</td>
+      <td>{{ fund.Sanctioned_IHHL }}</td>
+      <td>{{ fund.Estimated_Cost }}</td>
+      <td>{{ fund.Funds_from_ngo }}</td>
+    </tr>
+    {% endfor %}
+    <!-- <tr> -->
+      <!-- <th scope="row">2</th> -->
+      <!-- <td>Puducherry</td> -->
+      <!-- <td>Water Project</td> -->
+      <!-- <td>NGO2</td> -->
+      <!-- <td>$32000</td> -->
+    <!-- </tr> -->
+    <!-- <tr> -->
+      <!-- <th scope="row">3</th> -->
+      <!-- <td>Tiruppur</td> -->
+      <!-- <td>Sanitation Project</td> -->
+      <!-- <td>Local organisation</td> -->
+      <!-- <td>$12000</td> -->
+    <!-- </tr> -->
+      
+  </tbody>
+</table>
+    
+    
+    </div>
+<script>
+    function logout(){
+        alert("Logged Out Successfully");
+    }
+    
+    </script>
+</body>
+</html>

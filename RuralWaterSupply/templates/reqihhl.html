@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>New IHHL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    </head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Rural Water Supply and Sanitation</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="userhome.html">Home</a></li>
+      <li><a href="reqwatercon.html">Request New Water Connection</a></li>
+      <li class="active"><a href="reqihhl.html">Request New IHHL</a></li>
+      <li><a href="funding.html">Funding Details</a></li>
+      <li><a href="fundinput.html">Release Fund</a></li>
+      <li><a href="index.html" onclick="logout()">Logout</a></li>
+    </ul>
+      
+        
+      
+      
+  </div>
+</nav>
+  <h1>Request A New IHHL</h1>
+
+    <div class="container"> 
+      <form onsubmit="myFunction()" action="newihhlcon" >
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Firstname</label>
+            <input type="name" class="form-control" id="inputName" placeholder="Firstname" name="fname" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastname">Lastname</label>
+            <input type="name" class="form-control" id="inputLastname" placeholder="Lastname" name="lname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" required>
+        </div>
+        <div class="form-group">
+          <label for="request">Request ID</label>
+          <input type="text" class="form-control" id="request" placeholder="Request ID" name="requestid" required> 
+        </div>
+        <div class="form-group">
+          <label for="requirement">Requirement ID</label>
+          <input type="text" class="form-control" id="requirement" placeholder="Requirement ID" name="requirementid"  required> 
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputVillage">Village ID</label>
+            <input type="text" class="form-control" id="inputVillage" name="villageid" required>
+          </div>
+          <!-- <div class="form-group col-md-4"> -->
+            <!-- <label for="inputState">State</label> -->
+            <!-- <select id="inputState" class="form-control" required> -->
+              <!-- <option selected>Choose...</option> -->
+              <!-- <option>...</option> -->
+            <!-- </select> -->
+          <!-- </div> -->
+          <!-- <div class="form-group col-md-2"> -->
+            <!-- <label for="inputZip">Zip</label> -->
+            <!-- <input type="number" class="form-control" id="inputZip" required> -->
+          <!-- </div> -->
+        </div>
+                  <!-- <div class="form-group col-md-12"> -->
+            <!-- <label for="inputconnection">Connection Type</label> -->
+            <!-- <select id="inputconnection" class="form-control" required> -->
+              <!-- <option selected>Choose...</option> -->
+              <!-- <option></option> -->
+            <!-- </select> -->
+          <!-- </div> -->
+                  <br>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+            <label class="form-check-label" for="gridCheck">
+              Agree Terms & Conditions
+            </label>
+          </div>
+        </div>
+                  <br>
+       <button type="submit" class="btn btn-primary" id="connsubmit">Submit</button>
+              </form>
+<!--         <button type="submit" class="btn btn-primary" id="connsubmit">Submit</button>-->
+    <p id="success"></p>
+    
+    </div>
+<script>
+    
+//    document.getElementById("connsubmit").onclick = function(){
+//        document.getElementById("success").innerHTML = "Request Submitted";
+//        
+//    }
+    </script>
+    <script>
+    function logout(){
+        alert("Logged Out Successfully");
+    }
+        function myFunction(){
+            alert("Request Submitted");
+        }
+    
+    </script>
+</body>
+</html>
